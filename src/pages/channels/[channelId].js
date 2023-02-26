@@ -40,10 +40,14 @@ export default function Channel({ channelId, messages: initialMessages }) {
       </ul>
       <div className='mt-8 text-center'>
       <form onSubmit={handleSubmit}>
+        <div className="mb-4">
+            <label for="userName" className='mr-4'>Username</label>
         <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} />
+        </div>
+          <label for="text" className='mr-4'>Message</label>
         <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
-        <div>
-          <button type="submit" class='bg-green-400 text-slate-900 pt-1 pb-1 pl-4 pr-4 mt-4'>Send</button>
+        <div className='mt-4'>
+            <button type="submit" class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Send</button>
         </div>
       </form>
       </div>
